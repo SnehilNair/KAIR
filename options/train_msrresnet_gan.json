@@ -32,8 +32,8 @@
     , "test": {
       "name": "test_dataset"            // just name
       , "dataset_type": "sr"            // "dncnn" | "dnpatch" | "fdncnn" | "ffdnet" | "sr" | "srmd" | "dpsr" | "plain" | "plainpatch"
-      , "dataroot_H": "testsets/set5"   // path of H testing dataset
-      , "dataroot_L": null              // path of L testing dataset
+      , "dataroot_H": "/kaggle/input/enhance-the-dark-world/archive/val/gt"   // path of H testing dataset
+      , "dataroot_L": "/kaggle/input/enhance-the-dark-world/archive/val/val"              // path of L testing dataset
     }
   }
 
