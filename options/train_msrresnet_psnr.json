@@ -14,7 +14,7 @@
 
   , "path": {
     "root": "superresolution"      // "denoising" | "superresolution"
-    , "pretrained_netG": null      // path of pretrained model
+    , "pretrained_netG": "/kaggle/working/KAIR/model_zoo/msrresnet_x4_psnr.pth"      // path of pretrained model
     , "pretrained_netE": null      // path of pretrained model
   }
 
