@@ -66,7 +66,7 @@ def main():
     # ----------------------------------------
 
     model_name = 'msrresnet_x4_psnr'     # 'msrresnet_x4_gan' | 'msrresnet_x4_psnr'
-    testset_name = 'set5'                # test set,  'set5' | 'srbsd68'
+    testset_name = ''                # test set,  'set5' | 'srbsd68'
     need_degradation = True              # default: True
     x8 = False                           # default: False, x8 to boost performance, default: False
     sf = [int(s) for s in re.findall(r'\d+', model_name)][0]  # scale factor
@@ -78,7 +78,7 @@ def main():
     task_current = 'sr'       # 'dn' for denoising | 'sr' for super-resolution
     n_channels = 3            # fixed
     model_pool = 'model_zoo'  # fixed
-    testsets = 'testsets'     # fixed
+    testsets = '/kaggle/input/enhance-the-dark-world/archive/test'     # fixed
     results = 'results'       # fixed
     noise_level_img = 0       # fixed: 0, noise level for LR image
     result_name = testset_name + '_' + model_name
@@ -89,7 +89,8 @@ def main():
     # L_path, E_path, H_path
     # ----------------------------------------
 
-    L_path = os.path.join(testsets, testset_name) # L_path, for Low-quality images
+    # L_path = os.path.join(testsets, testset_name) # L_path, for Low-quality images
+    L_path = testsets
     H_path = L_path                               # H_path, for High-quality images
     E_path = os.path.join(results, result_name)   # E_path, for Estimated images
     util.mkdir(E_path)
